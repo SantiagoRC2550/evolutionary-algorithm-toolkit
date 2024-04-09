@@ -24,11 +24,11 @@ k = 0  # count
 
 # Gradient Descent
 while error > tol:
-    grad_n1 = (Objective(x[k]) - Objective(x[k] - h)) / h
-    x.append(x[k] - step * grad_n1)
+    grand_n1 = (Objective(x[k]) - Objective(x[k] - h)) / h
+    x.append(x[k] - step * grand_n1)
     grand_n = (Objective(x[k + 1])- Objective(x[k + 1]- h)) / h
     error = abs(x[k + 1] - x[k])  # to stop algorithm
-    step = abs(((x[k + 1])- x[k])*(grand_n-grad_n1)) / (abs((grand_n - grad_n1))**2)
+    step = abs(((x[k + 1])- x[k])*(grand_n-grand_n1)) / (abs((grand_n - grand_n1))**2)
     k += 1
 
     # Plot
